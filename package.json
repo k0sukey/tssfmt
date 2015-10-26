@@ -1,0 +1,24 @@
+{
+  "name": "tssfmt",
+  "version": "1.0.0",
+  "description": "tssfmt is Titanium Alloy .tss file formatter, order, beautifier for your coding standards.",
+  "main": "index.js",
+  "bin": {
+    "tssf": "bin/tssfmt.js"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "Kosuke Isobe",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "diff": "^2.1.3",
+    "lodash": "^3.10.1",
+    "meow": "^3.4.2",
+    "stringify-object": "^2.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
