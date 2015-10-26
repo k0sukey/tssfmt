@@ -58,6 +58,17 @@ $ tssfmt --dryrun path/to/foo.tss
 $ tssfmt path/to/foo.tss
 ```
 
+### Programmatically
+
+```sh
+$ npm install tssfmt --save
+```
+
+```js
+var tssfmt = require('tssfmt');
+tssfmt('// Comment\n"x": { top: 0, layout: "vertical", test: [1, 2, 3] }, "b[platform=ios]": { bottom: "10%" } "c": { width: Ti.UI.SIZE, height: Alloy.Globals.height }');
+```
+
 ### License
 
 MIT
