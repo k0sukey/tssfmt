@@ -6,10 +6,19 @@
   "bin": {
     "tssf": "bin/tssfmt.js"
   },
+  "preferGlobal": true,
   "scripts": {
     "test": "mocha test.js"
   },
   "author": "Kosuke Isobe",
+  "homepage": "https://github.com/k0sukey/tssfmt",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/k0sukey/tssfmt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/k0sukey/tssfmt/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.1",

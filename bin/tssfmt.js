@@ -10,7 +10,7 @@ var _ = require('lodash'),
 var cli = meow({
 	help: [
 		'Usage',
-		'  $ tssfmt <file>',
+		'  $ tssfmt <source> <destination>',
 		'',
 		'Options',
 		'  --diff Display the result diff',
@@ -18,7 +18,10 @@ var cli = meow({
 		'  --help Display this help screen',
 		'',
 		'Examples',
-		'  $ tssfmt path/to/foo.tss --diff'
+		'  $ tssfmt path/to/foo.tss --diff',
+		'  $ tssfmt path/to/foo.tss --dryrun',
+		'  $ tssfmt path/to/foo.tss',
+		'  $ tssfmt path/to/foo.tss path/to/bar.tss'
 	].join('\n')
 });
 
@@ -28,7 +31,7 @@ if (cli.flags.diff && cli.flags.dryrun) {
 }
 
 if (!fs.existsSync(cli.input[0])) {
-	console.error(chalk.red('[ERROR]') + ' Not exists .tss file ' + chalk.cyan(cli.input[0]));
+	console.error(chalk.red('[ERROR]') + ' Not exists source .tss file ' + chalk.cyan(cli.input[0]));
 	return;
 }
 
@@ -41,7 +44,7 @@ if (cli.flags.diff) {
 		process.stdout.write(chalk[color](part.value));
 	});
 } else if (cli.flags.dryrun) {
-	console.log(destination);
+	process.stdout.write(destination);
 } else {
-	fs.writeFileSync(cli.input[0], destination);
+	fs.writeFileSync(cli.input[1] ? cli.input[1] : cli.input[0], destination);
 }
