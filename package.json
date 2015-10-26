@@ -4,7 +4,7 @@
   "description": "tssfmt is Titanium Alloy .tss file formatter, order, beautifier for your coding standards.",
   "main": "index.js",
   "bin": {
-    "tssf": "bin/tssfmt.js"
+    "tssfmt": "bin/tssfmt.js"
   },
   "preferGlobal": true,
   "scripts": {
