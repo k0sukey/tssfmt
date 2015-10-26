@@ -1,6 +1,6 @@
 {
   "name": "tssfmt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tssfmt is Titanium Alloy .tss file formatter, order, beautifier for your coding standards.",
   "main": "index.js",
   "bin": {
