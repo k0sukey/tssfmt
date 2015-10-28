@@ -1,5 +1,4 @@
 var _ = require('lodash'),
-	diff = require('diff'),
 	stringifyObject = require('stringify-object'),
 	grammar = require('./lib/grammar'),
 	options = require('./lib/options');
